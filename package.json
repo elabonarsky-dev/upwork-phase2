@@ -1,0 +1,17 @@
+{
+  "name": "bookings-backend",
+  "version": "1.0.0",
+  "description": "Minimal backend enforcing one booking per (tenant_id, start_time_utc)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "db:show": "node -e \"const d=require('better-sqlite3')('bookings.db'); console.table(d.prepare('SELECT * FROM bookings').all());\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.6.0",
+    "express": "^4.21.0"
+  }
+}
